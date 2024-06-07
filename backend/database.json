@@ -1,0 +1,1 @@
+{"users":[{"id":0,"name":"Alvaro","email":"alvaro@email.com","password":"332211"}],"parkingSpaces":[{"id":1,"name":"teste","isOccupied":false},{"id":5,"name":"teste","isOccupied":false,"licensePlate":null},{"id":7,"name":"take","isOccupied":false,"licensePlate":null,"startTime":null},{"id":8,"name":"teste h","isOccupied":false,"licensePlate":null,"startTime":null}]}

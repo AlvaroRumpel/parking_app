@@ -1,5 +1,3 @@
-library exception;
-
 export 'custom_exception.dart';
 export 'invalid_input_exception.dart';
 export 'login_exception.dart';

@@ -12,7 +12,8 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<User> login(UserToLoginDTO user) async {
     await authDataSource.login(user);
-    return userFromDTO(await authDataSource.fetchUserByEmail(user.email));
+    final userData = await authDataSource.fetchUserByEmail(user.email);
+    return userFromDTO(userData);
   }
 
   @override

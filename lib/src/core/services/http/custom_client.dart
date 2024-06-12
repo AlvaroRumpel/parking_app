@@ -18,13 +18,13 @@ class CustomClient extends http.BaseClient {
 
   @override
   Future<http.StreamedResponse> send(http.BaseRequest request) async {
-    for (var interceptor in _interceptors) {
+    for (final interceptor in _interceptors) {
       await interceptor.onRequest(request);
     }
 
     final response = await _inner.send(request);
 
-    for (var interceptor in _interceptors) {
+    for (final interceptor in _interceptors) {
       await interceptor.onResponse(response);
     }
 

@@ -13,7 +13,7 @@
         "--dart-define",
         "FLAVOR=t1",
         "--dart-define",
-        "BASE_URL=http://192.168.1.106:8080"
+        "BASE_URL=http://192.168.1.104:8080"
       ]
     },
     {

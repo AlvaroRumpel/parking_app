@@ -22,7 +22,7 @@ class AuthInterceptor extends Interceptor {
   @override
   Future<void> onResponse(http.StreamedResponse response) async {
     if (response.statusCode == 401 || response.statusCode == 403) {
-     response = await _handle40x(response.request!);
+      response = await _handle40x(response.request!);
     }
   }
 

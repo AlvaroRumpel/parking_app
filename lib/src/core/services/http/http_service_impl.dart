@@ -21,7 +21,7 @@ class HttpServiceImpl implements HttpService {
     _baseUrl = const String.fromEnvironment('BASE_URL');
     _authInterceptor = AuthInterceptor(_client);
   }
-  static HttpServiceImpl get i => _instance.auth();
+  static HttpServiceImpl get i => _instance;
 
   @override
   HttpServiceImpl auth() {
@@ -36,11 +36,14 @@ class HttpServiceImpl implements HttpService {
   }
 
   @override
-  Future<List<Map<String, dynamic>>> get(String url) async {
+  Future<List<Map<String, dynamic>>> get(
+    String url, {
+    Duration? timeout,
+  }) async {
     return _performRequest(() async {
       return await _client
           .get(Uri.parse('$_baseUrl/$url'))
-          .timeout(_defaultTimeout);
+          .timeout(timeout ?? _defaultTimeout);
     });
   }
 
